@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "user@example.com",
+      "password": "password123",
+      "name": "John Doe"
+    },
+    {
+      "id": "2",
+      "email": "admin@example.com",
+      "password": "adminpass",
+      "name": "Admin User"
+    },
+    {
+      "id": "5e6b",
+      "username": "3veni287",
+      "name": "Nippulapalli Triveni",
+      "email": "3veni287@gmail.com",
+      "phone": "7674012446",
+      "password": "1234"
+    },
+    {
+      "id": "d84a",
+      "username": "harshitha73",
+      "name": "Harshitha",
+      "email": "harshitha@gmail.com",
+      "phone": "9876543210",
+      "password": "harshitha"
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc2",
+      "userId": "d84a",
+      "name": "Harshitha's Notes",
+      "content": "<p>Harshitha's personal notes.</p>"
+    }
+  ]
+}

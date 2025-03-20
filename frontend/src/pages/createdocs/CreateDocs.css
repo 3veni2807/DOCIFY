@@ -1,0 +1,169 @@
+/* Container for the editor */
+.editor-container {
+  width: 100%;
+  max-width: 1000px; /* Adjust width for better readability */
+  margin-left: 260px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.ql-container {
+  height: 470px !important;
+  border-radius: 8px;
+  font-family: inherit; /* Apply correct fonts */
+  background: #ffffff; /* White background */
+  border: 1px solid #ccc;
+}
+
+/* Ensure toolbar is properly spaced */
+.ql-toolbar {
+  background: #f3f3f3;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 10px;
+}
+
+/* Ensure editor content looks clean */
+.ql-editor {
+  min-height: 350px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Ensure Quill properly applies the font styles */
+.ql-editor {
+  font-family: inherit;
+}
+
+/* Styling for the download button */
+.download-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #0078d4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+.download-btn:hover {
+  background: #005ea6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .editor-container {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .download-btn {
+    width: 100%;
+  }
+
+  .ql-container {
+    height: 300px !important;
+  }
+}
+
+.ql-picker.ql-lineheight {
+  width: 50px !important;
+}
+
+.ql-editor [data-lineheight="1"] { line-height: 1 !important; }
+.ql-editor [data-lineheight="1.15"] { line-height: 1.15 !important; }
+.ql-editor [data-lineheight="1.5"] { line-height: 1.5 !important; }
+.ql-editor [data-lineheight="2"] { line-height: 2 !important; }
+.ql-editor [data-lineheight="2.5"] { line-height: 2.5 !important; }
+.ql-editor [data-lineheight="3"] { line-height: 3 !important; }
+
+
+
+
+.ql-toolbar select.ql-lineheight {
+  min-width: 100px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.save-btn{
+  margin-left: 10px;
+  color: #eef4f4;
+  background-color: #2c8560;
+}
+
+
+.view-docs-btn{
+  color: black;
+}
+
+.close-btn{
+  color: #000;
+}
+
+.modal-buttons button:hover,
+.modal-buttons button:focus {
+  border-color: black !important; /* Ensure it stays black on hover/focus */
+  box-shadow: none !important; /* Remove any blue glow effect */
+}
+
+.title-input{
+  margin-bottom: 15px;
+  padding: 8px;
+  color: #2c8560;
+}
+
+
+
+
+/* Responsive Design for Tablets and Mobile */
+@media (max-width: 1024px) {
+  /* Tablet view */
+  .editor-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .ql-container {
+    height: 400px !important;
+  }
+
+  .download-btn {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile view */
+  .editor-container {
+    width: 95%;
+    margin: 15px auto;
+    padding: 10px;
+  }
+
+  .ql-container {
+    height: 300px !important;
+  }
+
+  .ql-editor {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .download-btn {
+    width: 20%;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}

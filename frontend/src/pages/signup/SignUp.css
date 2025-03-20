@@ -1,0 +1,290 @@
+.signup-container {
+  display: flex;
+  width: 75vw;
+  height: 80vh;
+  margin-top: 70px;
+  margin-left: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.signup-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(188, 85, 85, 0.619);
+}
+
+.signup-left {
+  flex: 1;
+  background: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-right {
+  flex: 1;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.signup-form {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: left;
+  color: #333;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.signup-button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-button:hover {
+  background: #0056b3;
+}
+
+/* Login Redirect */
+.redirect-login {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.redirect-login span {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.redirect-login span:hover {
+  text-decoration: underline;
+}
+
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Modal Heading */
+.modal-content h2 {
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+/* Modal Paragraph */
+.modal-content p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Modal Button */
+.modal-content button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.modal-content button:hover {
+  background: #218838;
+}
+
+/* Modal Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+/* Small (≥576px) */
+@media (max-width: 576px) {
+  .signup-container {
+    width: 100%;
+    margin: 20px auto;
+    box-shadow: none;
+    border-radius: 10px;
+    transform: none;
+  }
+
+  .signup-left {
+    padding: 15px;
+  }
+
+  .signup-right {
+    display: none;
+  }
+
+  .signup-form {
+    max-width: 100%;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+
+  .signup-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .redirect-login {
+    font-size: 12px;
+  }
+}
+
+.login-link {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.login-link span {
+  color: #007bff;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.login-link span:hover {
+  color: #0056b3;
+}
+
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+    width: 80vw;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 50px;
+  }
+
+  .signup-left {
+    padding: 20px;
+  }
+
+  .signup-form {
+    max-width: 300px;
+  }
+
+  .signup-right {
+    display: none;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .signup-container {
+    width: 100%;
+    margin-top: 100px;
+    box-shadow: none;
+    border-radius: 10px;
+    transform: none;
+  }
+
+  .signup-left {
+    padding: 15px;
+  }
+
+  .signup-right {
+    display: none;
+  }
+
+  .signup-form {
+    max-width: 100%;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+
+  .signup-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .redirect-login {
+    font-size: 12px;
+  }
+}
