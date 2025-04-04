@@ -16,7 +16,7 @@ const ViewDocs = () => {
   useEffect(() => {
     const fetchDocuments = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/documents", {
+        const response = await fetch("https://docify-backend-i5o4.onrender.com/api/documents", {
           headers: {
             "Authorization": `Bearer ${tokenRef.current}`,
             "Content-Type": "application/json",
@@ -55,7 +55,7 @@ const ViewDocs = () => {
     if (!docToDelete) return; // If no document to delete, return
 
     try {
-      const response = await fetch(`http://localhost:5000/api/documents/${docToDelete._id}`, {
+      const response = await fetch(`https://docify-backend-i5o4.onrender.com/api/documents/${docToDelete._id}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${tokenRef.current}`,
@@ -91,7 +91,7 @@ const ViewDocs = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/documents", {
+      const response = await fetch("https://docify-backend-i5o4.onrender.com/api/documents", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

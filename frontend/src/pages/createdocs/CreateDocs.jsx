@@ -31,7 +31,7 @@ const CreateDocs = () => {
 
   const fetchDocument = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/documents/${id}`, {
+      const response = await fetch(`https://docify-backend-i5o4.onrender.com/api/documents/${id}`, {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -67,7 +67,7 @@ const CreateDocs = () => {
       let response;
       if (docId) {
         // Update existing document
-        response = await fetch(`http://localhost:5000/api/documents/${docId}`, {
+        response = await fetch(`https://docify-backend-i5o4.onrender.com/api/documents/${docId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -77,7 +77,7 @@ const CreateDocs = () => {
         });
       } else {
         // Create new document
-        response = await fetch("http://localhost:5000/api/documents", {
+        response = await fetch("https://docify-backend-i5o4.onrender.com/api/documents", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

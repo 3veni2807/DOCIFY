@@ -34,7 +34,7 @@ const Signup = () => {
     }
 
     try {
-      const checkResponse = await fetch(`http://localhost:5000/api/users/signup?email=${user.email}`);
+      const checkResponse = await fetch(`https://docify-backend-i5o4.onrender.com/api/users/signup?email=${user.email}`);
       const checkData = await checkResponse.json();
       if (!checkResponse.ok) {
         throw new Error(checkData.message || "Failed to validate user.");
@@ -60,7 +60,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/users/signup", {
+      const response = await fetch("https://docify-backend-i5o4.onrender.com/api/users/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(user),
